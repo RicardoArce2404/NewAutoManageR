@@ -1,0 +1,16 @@
+body {
+    font-family: sans-serif;
+}
+.container {
+    width: 90%;
+    max-width: 1080px;
+    border: 3px solid rgb(70, 70, 70);
+    margin: auto;
+    text-align: center;
+}
+.container > div {
+    display: block;
+    padding: 20px;
+    background: skyblue;
+    box-shadow: 2px 2px 10px rgba(70, 70, 70, 0.25);
+}
