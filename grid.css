@@ -2,14 +2,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-#title {
-    justify-self: start;
-    align-self: center;
-}
-#menu {
-    justify-self: end;
-    align-self: center;
-}
 
 .container {
     display: grid;
@@ -21,23 +13,25 @@
 #prev {
     grid-column: 1 / 6;
 }
+
 #oa {
     grid-column: 1 / 6;
 }
 
 @media screen and (max-width: 768px) {
     .container {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        gap: 5px;
     }
+
     #gen {
         grid-column: 2 / 4;
     }
+
     #prev {
         grid-column: 1 / 4;
     }
+
     #oa {
         grid-column: 1 / 4;
     }
