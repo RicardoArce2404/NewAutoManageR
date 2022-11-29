@@ -11,9 +11,9 @@ body {
     font-size: 20px;
 }
 
-/* .container>div {
-    border: 1px solid rgba(70, 70, 70, 0.25);
-} */
+textarea {
+    resize: none;
+}
 
 #header {
     display: flex;
@@ -85,6 +85,24 @@ body {
     color: white;
 }
 
+#gen>button {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(90, 90, 140);
+    color: white;
+    border: none;
+}
+
+#gen>button:hover {
+    transition-duration: 0.2s;
+    background-color: rgb(100, 100, 155);
+}
+
+#gen>button:active {
+    transition-duration: 0s;
+    background-color: rgb(120, 120, 186);
+}
+
 #prev {
     display: flex;
     justify-content: center;
@@ -99,6 +117,7 @@ body {
     width: 100%;
     background-color: rgb(90, 90, 140);
     color: white;
+    border: none;
 }
 
 #prev>button {
@@ -106,6 +125,16 @@ body {
     background-color: rgb(90, 90, 140);
     color: white;
     border: none;
+}
+
+#prev>button:hover {
+    transition-duration: 0.2s;
+    background-color: rgb(100, 100, 155);
+}
+
+#prev>button:active {
+    transition-duration: 0s;
+    background-color: rgb(120, 120, 186);
 }
 
 #oa {
