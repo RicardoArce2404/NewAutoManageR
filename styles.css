@@ -1,28 +1,15 @@
 body {
     font-family: sans-serif;
 }
-.header {
-    width: 90%;
-    max-width: 1080px;
-    border: 2px solid rgba(70, 70, 70, 0.5);
-    margin: auto;
-    text-align: center;
-}
-.header > div {
-    display: block;
-    border: 1px solid rgba(70, 70, 70, 0.25);
-}
 .container {
     width: 90%;
-    max-width: 1080px;
-    border: 2px solid rgba(70, 70, 70, 0.5);
     margin: auto;
-    text-align: center;
+    padding-top: 50px;
 }
 .container > div {
-    display: block;
     border: 1px solid rgba(70, 70, 70, 0.25);
 }
-
-/* Flexbox aligns */
-
+#title {
+    display: flex;
+    
+}
