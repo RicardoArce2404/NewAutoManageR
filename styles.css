@@ -8,22 +8,15 @@ body {
     padding-top: 50px;
 }
 
-.container>div {
+/* .container>div {
     border: 1px solid rgba(70, 70, 70, 0.25);
-}
+} */
 
-#title {
+#header {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     font-size: 30px;
-}
-
-#menu {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    font-size: 26px;
 }
 
 #id {
