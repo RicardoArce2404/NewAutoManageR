@@ -17,6 +17,7 @@ body {
     justify-content: space-between;
     align-items: center;
     font-size: 30px;
+    margin-bottom: 50px;
 }
 
 #id {
@@ -26,13 +27,9 @@ body {
 
 #id>input {
     width: 100%;
-}
-
-#id ::placeholder,
-#can ::placeholder,
-#prev ::placeholder,
-#oa ::placeholder {
     text-align: center;
+    border: 2px solid rgba(50, 50, 50, 0.8);
+    border-radius: 5px;
 }
 
 #can {
@@ -42,6 +39,9 @@ body {
 
 #can>input {
     width: 100%;
+    text-align: center;
+    border: 2px solid rgba(50, 50, 50, 0.8);
+    border-radius: 5px;
 }
 
 #lot {
@@ -51,18 +51,25 @@ body {
 
 #lot>select {
     width: 100%;
+    text-align: center;
+    border: 2px solid rgba(50, 50, 50, 0.8);
+    border-radius: 5px;
 }
 
 #ta {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid rgba(50, 50, 50, 0.8);
+    border-radius: 5px;
 }
 
 #gen {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid rgba(50, 50, 50, 0.8);
+    border-radius: 5px;
 }
 
 #prev {
@@ -73,6 +80,8 @@ body {
 
 #prev>textarea {
     width: 100%;
+    border: 2px solid rgba(50, 50, 50, 0.8);
+    border-radius: 5px;
 }
 
 #oa {
@@ -83,4 +92,13 @@ body {
 
 #oa>textarea {
     width: 100%;
+    border: 2px solid rgba(50, 50, 50, 0.8);
+    border-radius: 5px;
+}
+
+#id ::placeholder,
+#can ::placeholder,
+#prev ::placeholder,
+#oa ::placeholder {
+    text-align: center;
 }
