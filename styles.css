@@ -1,15 +1,93 @@
 body {
     font-family: sans-serif;
 }
+
 .container {
     width: 90%;
     margin: auto;
     padding-top: 50px;
 }
-.container > div {
+
+.container>div {
     border: 1px solid rgba(70, 70, 70, 0.25);
 }
+
 #title {
     display: flex;
-    
+    justify-content: start;
+    align-items: center;
+    font-size: 30px;
+}
+
+#menu {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 26px;
+}
+
+#id {
+    display: flex;
+    justify-content: center;
+}
+
+#id>input {
+    width: 100%;
+}
+
+#id ::placeholder,
+#can ::placeholder,
+#prev ::placeholder,
+#oa ::placeholder {
+    text-align: center;
+}
+
+#can {
+    display: flex;
+    justify-content: center;
+}
+
+#can>input {
+    width: 100%;
+}
+
+#lot {
+    display: flex;
+    justify-content: center;
+}
+
+#lot>select {
+    width: 100%;
+}
+
+#ta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#prev>textarea {
+    width: 100%;
+}
+
+#oa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#oa>textarea {
+    width: 100%;
 }
