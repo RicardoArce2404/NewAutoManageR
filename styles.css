@@ -159,7 +159,7 @@ textarea {
 }
 
 #oa>textarea {
-    height: 94%;
+    font-size: 14px;
     width: 100%;
     border-radius: 5px;
     border: none;
