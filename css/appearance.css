@@ -123,13 +123,3 @@ input ::placeholder {
     border: none;
     border-radius: 50%;
 }
-
-#fab>button:hover {
-    transition-duration: 0.2s;
-    background-color: #7878BA;
-}
-
-#fab>button:active {
-    transition-duration: 0s;
-    background-color: rgb(150, 150, 233);
-}
