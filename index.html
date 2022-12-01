@@ -4,26 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="grid.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/appearance.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>AutoManageR</title>
 </head>
 
 <body>
 
+    <header>
+        <div id="title">AutoManageR</div>
+        <div id="menu">Menú</div>
+    </header>
+
     <div class="container">
 
-        <div id="header">
-            <div>AutoManageR</div>
-            <div>Menú</div>
-        </div>
-        <div id="id"><input type="number" placeholder="ID"></div>
-        <div id="can"><input type="number" placeholder="Cantidad"></div>
+        <div id="id"><input class="item" type="number" placeholder="ID"></div>
+        <div id="can"><input class="item" type="number" placeholder="Cantidad"></div>
         <div id="lot">
-            <select placeholder="Lot">
+            <select class="item" placeholder="Lot">
                 <option value="du">Dulce</option>
                 <option value="chi">Chile</option>
                 <option value="ga">Galleta</option>
@@ -39,20 +40,65 @@
                 <option value="re">Reciclaje</option>
             </select>
         </div>
-        <div id="ta"><button onclick="toggleShop()">Tienda abierta</button></div>
-        <div id="gen"><button onclick="genPrev()"><i class="material-icons">send</i></button></div>
-        <div id="prev">
-            <textarea readonly></textarea>
-            <button>CLP</button>
-            <button><i class="material-icons">content_copy</i></button>
+        <div id="ta"><button class="item" onclick="toggleShop()">Tienda abierta</button></div>
+        <div id="gen1"><button class="item" onclick="genPrev()"><i class="material-icons">send</i></button></div>
+
+
+        <div id="id1"><input class="item" type="number" placeholder="ID #1"></div>
+        <div id="can1"><input class="item" type="number" placeholder="Cant. #1"></div>
+        <div id="lot1">
+            <select class="item" placeholder="Lot">
+                <option value="du">Dulce</option>
+                <option value="chi">Chile</option>
+                <option value="ga">Galleta</option>
+                <option value="le">Leche</option>
+                <option value="vi">Vino</option>
+                <option value="gu">Guaraná</option>
+                <option value="cho">Chocolate</option>
+                <option value="te">Té</option>
+                <option value="ham">Hamburguesa</option>
+                <option value="ba">Bancuna</option>
+                <option value="in">Intercambio</option>
+                <option value="har">Hartz</option>
+                <option value="re">Reciclaje</option>
+            </select>
         </div>
-        <div id="oa"><textarea></textarea></div>
+        <div id="id2"><input class="item" type="number" placeholder="ID #2"></div>
+        <div id="can2"><input class="item" type="number" placeholder="Cant. #2"></div>
+        <div id="lot2">
+            <select class="item" placeholder="Lot">
+                <option value="du">Dulce</option>
+                <option value="chi">Chile</option>
+                <option value="ga">Galleta</option>
+                <option value="le">Leche</option>
+                <option value="vi">Vino</option>
+                <option value="gu">Guaraná</option>
+                <option value="cho">Chocolate</option>
+                <option value="te">Té</option>
+                <option value="ham">Hamburguesa</option>
+                <option value="ba">Bancuna</option>
+                <option value="in">Intercambio</option>
+                <option value="har">Hartz</option>
+                <option value="re">Reciclaje</option>
+            </select>
+        </div>
+        <div id="gen2"><button class="item" onclick="genPrev()"><i class="material-icons">send</i></button></div>
+
+
+        <div id="prev">
+            <textarea id="prevText" class="item" readonly></textarea>
+            <button id="clpButton" class="item">CLP</button>
+            <button id="copyButton" class="item"><i class="material-icons">content_copy</i></button>
+        </div>
+        <div id="oa"><textarea class="item"></textarea></div>
 
     </div>
 
     <div id="fab">
         <button>M</button>
     </div>
+
+    <script src="script.js"></script>
 
 </body>
 
