@@ -1,4 +1,6 @@
 header {
+    height: 15vh;
+    min-height: 120px;
     display: grid;
     grid-template-columns: 1fr fr;
     grid-template-rows: 1fr;
@@ -14,9 +16,11 @@ header {
 }
 
 .container {
+    height: 75vh;
+    min-height: 480px;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(3, 50px) 250px;
+    grid-template-rows: repeat(3, 1fr) 250px;
     gap: 5px;
 }
 
@@ -46,7 +50,7 @@ header {
 @media screen and (max-width: 768px) {
     .container {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: repeat(6, 50px) 250px;
+        grid-template-rows: repeat(6, 1fr) 250px;
     }
 
     #id { grid-column: 1 / 2; }

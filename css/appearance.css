@@ -7,17 +7,16 @@ body {
 header {
     width: 90%;
     margin: auto;
-    padding-top: 50px;
     font-size: 32px;
 }
 
 #title {
-    margin-left: 10px;
+    margin: auto 0px auto 10px;
 }
 
 #menu {
     text-align: end;
-    margin-right: 10px;
+    margin: auto 10px auto 0px;
 }
 
 
@@ -42,7 +41,6 @@ input[type=number] {
 .container {
     width: 90%;
     margin: auto;
-    padding-top: 50px;
     font-size: 20px;
 }
 

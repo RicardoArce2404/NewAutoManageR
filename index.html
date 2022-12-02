@@ -41,13 +41,15 @@
             </select>
         </div>
         <div id="ta"><button class="item" onclick="toggleShop()">Tienda abierta</button></div>
-        <div id="gen1"><button class="item" onclick="genPrev()"><i class="material-icons">send</i></button></div>
+        <div id="gen1"><button class="item" onclick="genPrev1()"><i class="material-icons">send</i></button></div>
 
 
         <div id="id1"><input class="item" type="number" placeholder="ID #1"></div>
         <div id="can1"><input class="item" type="number" placeholder="Cant. #1"></div>
         <div id="lot1">
             <select class="item" placeholder="Lot">
+                <option value="co">Comercios</option>
+                <option value="it">Item</option>
                 <option value="du">Dulce</option>
                 <option value="chi">Chile</option>
                 <option value="ga">Galleta</option>
@@ -67,6 +69,8 @@
         <div id="can2"><input class="item" type="number" placeholder="Cant. #2"></div>
         <div id="lot2">
             <select class="item" placeholder="Lot">
+                <option value="co">Comercios</option>
+                <option value="it">Item</option>
                 <option value="du">Dulce</option>
                 <option value="chi">Chile</option>
                 <option value="ga">Galleta</option>
@@ -82,7 +86,7 @@
                 <option value="re">Reciclaje</option>
             </select>
         </div>
-        <div id="gen2"><button class="item" onclick="genPrev()"><i class="material-icons">send</i></button></div>
+        <div id="gen2"><button class="item" onclick="genPrev2()"><i class="material-icons">send</i></button></div>
 
 
         <div id="prev">
@@ -92,10 +96,6 @@
         </div>
         <div id="oa"><textarea class="item"></textarea></div>
 
-    </div>
-
-    <div id="fab">
-        <button>M</button>
     </div>
 
     <script src="script.js"></script>

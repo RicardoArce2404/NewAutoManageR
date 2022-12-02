@@ -1,5 +1,4 @@
-#id, #can, #lot, #ta, #gen1,
-#id1, #can1, #lot1, #id2, #can2, #lot2, #gen2, #prev, #oa {
+.container > div {
     display: flex;
     justify-content: stretch;
     align-items: stretch;

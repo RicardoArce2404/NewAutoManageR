@@ -12,12 +12,8 @@ function toggleShop() {
     shopButton.style.backgroundColor = (shopStatus == true) ? '#5A5A8C' : '#1E1E1E';
 }
 
-function g1(lot) {
-    s1 = s1.concat(`co,${lot},`)
-}
-function g2(id) {
-    s2 = s2.concat(`${id}x2,`)
-}
+function g1(lot) { s1 = s1.concat(`co,${lot},`) }
+function g2(id) { s2 = s2.concat(`${id}x2,`) }
 function g3(can, lot) {
 
     let lotIndex; let lotCost; let totalCost;
@@ -28,11 +24,15 @@ function g3(can, lot) {
 
     s3 = s3.concat(`${totalCost},${can},`)
 }
-function g4() {
-    s4 = s4.concat('-,+,')
+function g4() { s4 = s4.concat('-,+,') }
+
+function g5(lot1, lot2) {
+    if (lot1) {
+        
+    }
 }
 
-function genPrev() {
+function genPrev1() {
 
     let id = document.querySelector('#id>input').value;
     let can = document.querySelector('#can>input').value;
@@ -40,5 +40,19 @@ function genPrev() {
     let prev = document.querySelector('#prev>textarea');
 
     g1(lot); g2(id); g3(can, lot); g4();
-    prev.value = `/chlots ${s1.slice(0,-1)} ${s2.slice(0,-1)} ${s3.slice(0,-1)} ${s4.slice(0,-1)}`;
+    prev.value = `/chlots ${s1.slice(0, -1)} ${s2.slice(0, -1)} ${s3.slice(0, -1)} ${s4.slice(0, -1)}`;
+}
+
+function genPrev2() {
+
+    let id1 = document.querySelector('#id1>input').value;
+    let can1 = document.querySelector('#can1>input').value;
+    let lot1 = document.querySelector('#lot1>select').value;
+    let id2 = document.querySelector('#id2>input').value;
+    let can2 = document.querySelector('#can2>input').value;
+    let lot2 = document.querySelector('#lot2>select').value;
+    let prev = document.querySelector('#prev>textarea');
+
+    g1(lot); g2(id); g3(can, lot); g4();
+    prev.value = `/chlots ${s1.slice(0, -1)} ${s2.slice(0, -1)} ${s3.slice(0, -1)} ${s4.slice(0, -1)}`;
 }
