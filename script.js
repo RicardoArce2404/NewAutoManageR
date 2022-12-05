@@ -135,7 +135,7 @@ function g3i(lot1, lot2, can1, can2 = 0) {
             s3 = s3.concat(`${can1},${can2},`);
         }
         else {
-            s3 = s3.concat(`${can1},${can2},${L2},${can1},`);
+            s3 = s3.concat(`${can1},${can2},${L2},${can2},`);
         }
     }
     if (lot1 != 'co' && lot1 != 'it') {

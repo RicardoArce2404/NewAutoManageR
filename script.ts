@@ -97,7 +97,7 @@ function g3i(lot1: string, lot2: string, can1: number, can2: number = 0) {
         if (lot2 == '-') { s3 = s3.concat(`${can1},`) }
         else if (lot2 == 'com') { s3 = s3.concat(`${can1},${can2},${C2},${can2},`) }
         else if (lot2 == 'it') { s3 = s3.concat(`${can1},${can2},`) }
-        else { s3 = s3.concat(`${can1},${can2},${L2},${can1},`) }
+        else { s3 = s3.concat(`${can1},${can2},${L2},${can2},`) }
     }
 
     if (lot1 != 'co' && lot1 != 'it') {
