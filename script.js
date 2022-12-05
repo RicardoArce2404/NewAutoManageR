@@ -3,7 +3,6 @@ var lotCosts = [[5, 20], [5, 10], [20, 30], [25, 35], [30, 40], [35, 45], [35, 6
 var shopStatus = false;
 var [s1, s2, s3, s4] = ['', '', '', ''];
 // Structure: /chlots s1 s2 s3 s4 clp
-// g#p() -> generator#purchaseMode()    g#i() -> generator#interchangeMode()
 let r = (x) => (x < 1) ? 1 : Math.floor(x); // round function
 function toggleShop() {
     shopStatus = (shopStatus == true) ? false : true;
@@ -197,29 +196,35 @@ function g4i(lot1, lot2) {
     }
 }
 function genPrev1() {
-    let id = document.querySelector('#id>input').value;
-    let can = document.querySelector('#can>input').value;
-    let lot = document.querySelector('#lot>select').value;
+    let id = document.querySelector('#id>input');
+    let can = document.querySelector('#can>input');
+    let lot = document.querySelector('#lot>select');
     let prev = document.querySelector('#prev>textarea');
-    g1p(lot);
-    g2p(id);
-    g3p(can, lot);
+    g1p(lot.value);
+    g2p(id.value);
+    g3p(can.value, lot.value);
     g4p();
     prev.value = `/chlots ${s1.slice(0, -1)} ${s2.slice(0, -1)} ${s3.slice(0, -1)} ${s4.slice(0, -1)}`;
+    id.value = '';
+    can.value = '';
 }
 function genPrev2() {
-    let id1 = document.querySelector('#id1>input').value;
-    let can1 = document.querySelector('#can1>input').value;
-    let lot1 = document.querySelector('#lot1>select').value;
-    let id2 = document.querySelector('#id2>input').value;
-    let can2 = document.querySelector('#can2>input').value;
-    let lot2 = document.querySelector('#lot2>select').value;
+    let id1 = document.querySelector('#id1>input');
+    let can1 = document.querySelector('#can1>input');
+    let lot1 = document.querySelector('#lot1>select');
+    let id2 = document.querySelector('#id2>input');
+    let can2 = document.querySelector('#can2>input');
+    let lot2 = document.querySelector('#lot2>select');
     let prev = document.querySelector('#prev>textarea');
-    g1i(lot1, lot2);
-    g2i(lot1, lot2, Number(id1), Number(id2));
-    g3i(lot1, lot2, Number(can1), Number(can2));
-    g4i(lot1, lot2);
+    g1i(lot1.value, lot2.value);
+    g2i(lot1.value, lot2.value, Number(id1.value), Number(id2.value));
+    g3i(lot1.value, lot2.value, Number(can1.value), Number(can2.value));
+    g4i(lot1.value, lot2.value);
     prev.value = `/chlots ${s1.slice(0, -1)} ${s2.slice(0, -1)} ${s3.slice(0, -1)} ${s4.slice(0, -1)}`;
+    id1.value = '';
+    can1.value = '';
+    id2.value = '';
+    can2.value = '';
 }
 const copy = async () => {
     let prev = document.querySelector('#prev>textarea');

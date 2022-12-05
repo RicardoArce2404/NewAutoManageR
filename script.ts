@@ -147,8 +147,8 @@ function genPrev1() {
 
     prev.value = `/chlots ${s1.slice(0, -1)} ${s2.slice(0, -1)} ${s3.slice(0, -1)} ${s4.slice(0, -1)}`;
 
-    id.value = id.defaultValue;
-    can.value = can.defaultValue;
+    id.value = '';
+    can.value = '';
 
 }
 
@@ -168,10 +168,10 @@ function genPrev2() {
 
     prev.value = `/chlots ${s1.slice(0, -1)} ${s2.slice(0, -1)} ${s3.slice(0, -1)} ${s4.slice(0, -1)}`;
 
-    id1.value = id1.defaultValue;
-    can1.value = can1.defaultValue;
-    id2.value = id2.defaultValue;
-    can2.value = can2.defaultValue;
+    id1.value = '';
+    can1.value = '';
+    id2.value = '';
+    can2.value = '';
 
 }
 
