@@ -2,7 +2,7 @@ var lotNames = ['du', 'chi', 'le', 'vi', 'ga', 'gu', 'te', 'cho', 'ham', 'ba', '
 var lotCosts = [[5, 20], [5, 10], [20, 30], [25, 35], [30, 40], [35, 45], [35, 60], [40, 60], [60, 80], [15, 25], [25, 0], [40, 0], [90, 0]];
 
 var shopStatus = false;
-var s1 = ''; var s2 = ''; var s3 = ''; var s4 = '';
+var [s1,s2,s3,s4] = ['','','','']
 
 // Structure: /chlots s1 s2 s3 s4 clp
 
@@ -36,23 +36,23 @@ function g1i(lot1: string, lot2: string) {
 
     if (lot1 == 'co') {
         if (lot2 == '-') { s1 = s1.concat('in,co,co,') }
-        if (lot2 == 'co') {}  // Make an error message
-        if (lot2 == 'it') { s1 = s1.concat('in,co,in,co,') }
-        if (lot2 != 'co' && lot2 != 'it') { s1 = s1.concat(`in,co,${lot2},in,${lot2},co,`) }
+        else if (lot2 == 'co') {}  // Make an error message
+        else if (lot2 == 'it') { s1 = s1.concat('in,co,in,co,') }
+        else { s1 = s1.concat(`in,co,${lot2},in,${lot2},co,`) }
     }
 
     if (lot1 == 'it') {
         if (lot2 == '-') { s1 = s1.concat('in,') }
-        if (lot2 == 'com') { s1 = s1.concat('in,co,in,co,') }
-        if (lot2 == 'it') { s1 = s1.concat('in,in,') }
-        if (lot2 != 'co' && lot2 != 'it') { s1 = s1.concat(`in,${lot2},in,${lot2},`) }
+        else if (lot2 == 'co') { s1 = s1.concat('in,co,in,co,') }
+        else if (lot2 == 'it') { s1 = s1.concat('in,in,') }
+        else { s1 = s1.concat(`in,${lot2},in,${lot2},`) }
     }
 
     if (lot1 != 'co' && lot1 != 'it') {
         if (lot2 == '-') { s1 = s1.concat(`in,${lot1},${lot1},`) }
-        if (lot2 == 'co') { s1 = s1.concat(`in,${lot1},co,in,co,${lot1},`) }
-        if (lot2 == 'it') { s1 = s1.concat(`in,${lot1},in,${lot1},`) }
-        if (lot2 != 'co' && lot2 != 'it') { s1 = s1.concat(`in,${lot1},${lot2},in,${lot2},${lot1},`) }
+        else if (lot2 == 'co') { s1 = s1.concat(`in,${lot1},co,in,co,${lot1},`) }
+        else if (lot2 == 'it') { s1 = s1.concat(`in,${lot1},in,${lot1},`) }
+        else { s1 = s1.concat(`in,${lot1},${lot2},in,${lot2},${lot1},`) }
     }
 
 }
@@ -61,23 +61,23 @@ function g2i(lot1: string, lot2: string, id1: number, id2: number) {
 
     if (lot1 == 'co') {
         if (lot2 == '-') { s2 = s2.concat(`${id1}x2,${id2},`) }
-        if (lot2 == 'co') {}  // Make an error message
-        if (lot2 == 'it') { s2 = s2.concat(`${id1}x2,${id2}x2,`) }
-        if (lot2 != 'co' && lot2 != 'it') { s2 = s2.concat(`${id1}x3,${id2}x3,`) }
+        else if (lot2 == 'co') {}  // Make an error message
+        else if (lot2 == 'it') { s2 = s2.concat(`${id1}x2,${id2}x2,`) }
+        else { s2 = s2.concat(`${id1}x3,${id2}x3,`) }
     }
 
     if (lot1 == 'it') {
         if (lot2 == '-') { s2 = s2.concat(`${id1},`) }
-        if (lot2 == 'com') { s2 = s2.concat(`${id1}x2,${id2}x2,`) }
-        if (lot2 == 'it') { s2 = s2.concat(`${id1},${id2},`) }
-        if (lot2 != 'co' && lot2 != 'it') { s2 = s2.concat(`${id1}x2,${id2}x2,`) }
+        else if (lot2 == 'com') { s2 = s2.concat(`${id1}x2,${id2}x2,`) }
+        else if (lot2 == 'it') { s2 = s2.concat(`${id1},${id2},`) }
+        else { s2 = s2.concat(`${id1}x2,${id2}x2,`) }
     }
 
     if (lot1 != 'co' && lot1 != 'it') {
         if (lot2 == '-') { s2 = s2.concat(`${id1}x2,${id2},`) }
-        if (lot2 == 'co') { s2 = s2.concat(`${id1}x3,${id2}x3,`) }
-        if (lot2 == 'it') { s2 = s2.concat(`${id1}x2,${id2}x2,`) }
-        if (lot2 != 'co' && lot2 != 'it') { s2 = s2.concat(`${id1}x3,${id2}x3,`) }
+        else if (lot2 == 'co') { s2 = s2.concat(`${id1}x3,${id2}x3,`) }
+        else if (lot2 == 'it') { s2 = s2.concat(`${id1}x2,${id2}x2,`) }
+        else { s2 = s2.concat(`${id1}x3,${id2}x3,`) }
     }
 
 }
@@ -88,24 +88,24 @@ function g3i(lot1: string, lot2: string, can1: number, can2: number = 0) {
     let L2 = r(can2/10); let C2 = r(can2/300);
 
     if (lot1 == 'co') {
-        if (lot2 == '-') { s3 = s3.concat(`${C1},${can1},${can1}`) }
-        if (lot2 == 'co') {}  // Make an error message
-        if (lot2 == 'it') { s3 = s3.concat(`${C1},${can1},${can2},${can1}`) }
-        if (lot2 != 'co' && lot2 != 'it') { s3 = s3.concat(`${C1},${can1},${can2},${L2},${can2},${can1}`) }
+        if (lot2 == '-') { s3 = s3.concat(`${C1},${can1},${can1},`) }
+        else if (lot2 == 'co') {}  // Make an error message
+        else if (lot2 == 'it') { s3 = s3.concat(`${C1},${can1},${can2},${can1},`) }
+        else { s3 = s3.concat(`${C1},${can1},${can2},${L2},${can2},${can1},`) }
     }
 
     if (lot1 == 'it') {
-        if (lot2 == '-') { s3 = s3.concat(`${can1}`) }
-        if (lot2 == 'com') { s3 = s3.concat(`${can1},${can2},${C2},${can2}`) }
-        if (lot2 == 'it') { s3 = s3.concat(`${can1},${can2}`) }
-        if (lot2 != 'co' && lot2 != 'it') { s3 = s3.concat(`${can1},${can2},${L2},${can1}`) }
+        if (lot2 == '-') { s3 = s3.concat(`${can1},`) }
+        else if (lot2 == 'com') { s3 = s3.concat(`${can1},${can2},${C2},${can2},`) }
+        else if (lot2 == 'it') { s3 = s3.concat(`${can1},${can2},`) }
+        else { s3 = s3.concat(`${can1},${can2},${L2},${can1},`) }
     }
 
     if (lot1 != 'co' && lot1 != 'it') {
-        if (lot2 == '-') { s3 = s3.concat(`${L1},${can1},${can1}`) }
-        if (lot2 == 'co') { s3 = s3.concat(`${L1},${can1},${can2},${C2},${can2},${can1}`) }
-        if (lot2 == 'it') { s3 = s3.concat(`${L1},${can1},${can2},${can1}`) }
-        if (lot2 != 'co' && lot2 != 'it') { s3 = s3.concat(`${L1},${can1},${can2},${L2},${can2},${can1}`) }
+        if (lot2 == '-') { s3 = s3.concat(`${L1},${can1},${can1},`) }
+        else if (lot2 == 'co') { s3 = s3.concat(`${L1},${can1},${can2},${C2},${can2},${can1},`) }
+        else if (lot2 == 'it') { s3 = s3.concat(`${L1},${can1},${can2},${can1},`) }
+        else { s3 = s3.concat(`${L1},${can1},${can2},${L2},${can2},${can1},`) }
     }
 
 }
@@ -113,27 +113,28 @@ function g3i(lot1: string, lot2: string, can1: number, can2: number = 0) {
 function g4i(lot1: string, lot2: string) {
 
     if (lot1 == 'co') {
-        if (lot2 == '-') { s4 = s4.concat('-x2,+') }
-        if (lot2 == 'co') {}  // Make an error message
-        if (lot2 == 'it') { s4 = s4.concat('-x3,+,') }
-        if (lot2 != 'co' && lot2 != 'it') { s4 = s4.concat('-x2,+,-x2,+,') }
+        if (lot2 == '-') { s4 = s4.concat('-x2,+,') }
+        else if (lot2 == 'co') {}  // Make an error message
+        else if (lot2 == 'it') { s4 = s4.concat('-x3,+,') }
+        else { s4 = s4.concat('-x2,+,-x2,+,') }
     }
 
     if (lot1 == 'it') {
         if (lot2 == '-') { s4 = s4.concat('-,') }
-        if (lot2 == 'com') { s4 = s4.concat('-,+,-x2,') }
-        if (lot2 == 'it') { s4 = s4.concat('-x2,') }
-        if (lot2 != 'co' && lot2 != 'it') { s4 = s4.concat('-,+,-x2,') }
+        else if (lot2 == 'com') { s4 = s4.concat('-,+,-x2,') }
+        else if (lot2 == 'it') { s4 = s4.concat('-x2,') }
+        else { s4 = s4.concat('-,+,-x2,') }
     }
 
     if (lot1 != 'co' && lot1 != 'it') {
         if (lot2 == '-') { s4 = s4.concat('-x2,+,') }
-        if (lot2 == 'co') { s4 = s4.concat('-x2,+,-x2,+,') }
-        if (lot2 == 'it') { s4 = s4.concat('-x3,+,') }
-        if (lot2 != 'co' && lot2 != 'it') { s4 = s4.concat('-x2,+,-x2,+,') }
+        else if (lot2 == 'co') { s4 = s4.concat('-x2,+,-x2,+,') }
+        else if (lot2 == 'it') { s4 = s4.concat('-x3,+,') }
+        else { s4 = s4.concat('-x2,+,-x2,+,') }
     }
 
 }
+
 
 function genPrev1() {
 
@@ -165,4 +166,21 @@ function genPrev2() {
 
     prev.value = `/chlots ${s1.slice(0, -1)} ${s2.slice(0, -1)} ${s3.slice(0, -1)} ${s4.slice(0, -1)}`;
     
+}
+
+
+const copy = async () => {
+    let prev = (<HTMLTextAreaElement>document.querySelector('#prev>textarea'));
+    try {await navigator.clipboard.writeText(prev.value); alert('Copiado');}
+    catch (e) {alert('No se pudo copiar, error: ' + e)}
+}
+
+
+function addCLP() {
+
+    let prev = (<HTMLTextAreaElement>document.querySelector('#prev>textarea'));
+    
+    if (!prev.value.endsWith('p')) {
+        prev.value = prev.value.concat(' clp')
+    }
 }
