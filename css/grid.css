@@ -16,7 +16,7 @@ header {
 }
 
 .container {
-    height: 75vh;
+    height: 65vh;
     min-height: 480px;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
