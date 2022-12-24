@@ -2,12 +2,12 @@ var lotNames = ['du', 'chi', 'le', 'vi', 'ga', 'gu', 'te', 'cho', 'ham', 'ba', '
 var lotCosts = [[5, 20], [5, 10], [20, 30], [25, 35], [30, 40], [35, 45], [35, 60], [40, 60], [60, 80], [15, 25], [25, 0], [40, 0], [90, 0]];
 
 var shopStatus = false;
-var [s1, s2, s3, s4] = ['', '', '', '']
+var [s1, s2, s3, s4] = ['', '', '', ''];
 
 // Structure: /chlots s1 s2 s3 s4 clp
 
 
-let r = (x: number) => (x < 1) ? 1 : Math.floor(x)  // round function
+let r = (x: number) => (x <= 1) ? 1 : Math.floor(x) + 1; // round-to-up function
 
 function toggleShop() {
     shopStatus = (shopStatus == true) ? false : true;
@@ -175,6 +175,12 @@ function genPrev2() {
 
 }
 
+function resetPrev() {
+
+    let prev = (<HTMLTextAreaElement>document.querySelector('#prev>textarea'));
+    prev.value = ''; s1 = ''; s2 = ''; s3 = ''; s4 = '';
+    
+}
 
 const copy = async () => {
     let prev = (<HTMLTextAreaElement>document.querySelector('#prev>textarea'));

@@ -1,9 +1,18 @@
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 var lotNames = ['du', 'chi', 'le', 'vi', 'ga', 'gu', 'te', 'cho', 'ham', 'ba', 'in', 'har', 're'];
 var lotCosts = [[5, 20], [5, 10], [20, 30], [25, 35], [30, 40], [35, 45], [35, 60], [40, 60], [60, 80], [15, 25], [25, 0], [40, 0], [90, 0]];
 var shopStatus = false;
 var [s1, s2, s3, s4] = ['', '', '', ''];
 // Structure: /chlots s1 s2 s3 s4 clp
-let r = (x) => (x < 1) ? 1 : Math.floor(x); // round function
+let r = (x) => (x <= 1) ? 1 : Math.floor(x) + 1; // round-to-up function
 function toggleShop() {
     shopStatus = (shopStatus == true) ? false : true;
     let shopButton = document.querySelector('#ta>button');
@@ -226,16 +235,24 @@ function genPrev2() {
     id2.value = '';
     can2.value = '';
 }
-const copy = async () => {
+function resetPrev() {
+    let prev = document.querySelector('#prev>textarea');
+    prev.value = '';
+    s1 = '';
+    s2 = '';
+    s3 = '';
+    s4 = '';
+}
+const copy = () => __awaiter(this, void 0, void 0, function* () {
     let prev = document.querySelector('#prev>textarea');
     try {
-        await navigator.clipboard.writeText(prev.value);
+        yield navigator.clipboard.writeText(prev.value);
         alert('Copiado');
     }
     catch (e) {
         alert('No se pudo copiar, error: ' + e);
     }
-};
+});
 function addCLP() {
     let prev = document.querySelector('#prev>textarea');
     if (!prev.value.endsWith('p')) {
