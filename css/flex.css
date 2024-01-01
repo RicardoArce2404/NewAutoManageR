@@ -3,3 +3,7 @@
     justify-content: stretch;
     align-items: center;
 }
+
+.section-label {
+    align-self: self-end;
+}
